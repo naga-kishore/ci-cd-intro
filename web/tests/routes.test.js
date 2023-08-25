@@ -5,12 +5,12 @@ describe('Default Endpoint', () => {
   it('should return status 200', async () => {
     const res = await request(app)
       .get('/')
-    expect(res.statusCode).toEqual(200)
+    expect(res.statusCode).toEqual(201)
   })
 })
 
 describe('New Endpoint', () => {
-  it('should return a static json response with status 200', async () => {
+  it('should return a static json response with status 201', async () => {
     const res = await request(app)
       .get('/ice-flakes')
     expect(res.body).toEqual({
